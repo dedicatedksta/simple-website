@@ -5,8 +5,16 @@ import { motion,AnimatePresence } from "framer-motion";
 const Backdrop = ({children,close,visibility}) => {
   
 
-  if (visibility)document.querySelector('body').classList.add('stop-scrolling')
-  else document.querySelector('body').classList.remove('stop-scrolling')
+  if (visibility){
+    let TopScroll = window.pageYOffset || document.documentElement.scrollTop
+    let LeftScroll = window.pageXOffset || document.documentElement.scrollLeft 
+    window.onscroll=()=>{
+      window.scrollTo(LeftScroll, TopScroll);
+      }
+    }
+  else {
+    window.onscroll = function() {};
+  }
 
   return <AnimatePresence>
     {visibility &&
