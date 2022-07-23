@@ -5,6 +5,7 @@ import MainImage from "./components/mainImage/MainImage";
 import CardList from "./components/ui/CardList";
 import FormLayout from "./components/ui/FormLayout";
 import Navbar from "./components/ui/Navbar";
+import Map from "./components/ui/Map";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <CardList/>
       <Coaches/>
       <FormLayout popup={false}/>
+      <Map/>
     </div>
   );
 }
