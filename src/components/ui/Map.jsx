@@ -3,7 +3,7 @@ import map from "../../assets/map/map.png"
 import {FaTelegram,FaTwitterSquare} from "react-icons/fa"
 
 const Map = () => {
-  return <div id="contacts" className="my-40 relative">
+  return <div id="contacts" className="mt-40 relative">
     <img src={map} className="w-screen h-[500px] object-cover"  alt="" />
     <div className="absolute bg-white top-[15%] left-[10%] md:top-[20%] md:left-[25%] max-w-2xl p-12 ">
       <h1 className="mb-8 text-2xl font-bold">Контакты</h1>

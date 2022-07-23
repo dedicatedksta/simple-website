@@ -23,7 +23,7 @@ const Navbar = () => {
       />
       :<RiCloseFill onClick={()=>setIsVisible(!isVisible)} className={`cursor-pointer md:hidden absolute top-3 text-2xl right-6`}/>
     }
-    <HashLink to="#home" smooth><button className="fixed bottom-4 right-4 bg-black p-2 text-xl md:p-3 text-white rounded-full md:text-2xl" >
+    <HashLink to="#home" smooth><button className=" z-40 fixed bottom-3 right-3 md:bottom-6 md:right-6 bg-white p-2 text-xl md:p-3 text-black  rounded-full md:text-2xl" style={{boxShadow: '6px 6px 12px 2px rgba(0, 0, 0, 0.2)'}} >
       <BsChevronUp />
     </button></HashLink>
   </nav>;
