@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion"
-import one from "../assets/disciplines/disc1.jpg"
-import two from "../assets/disciplines/disc2.JPG"
-import three from "../assets/disciplines/disc3.JPG"
+import one from "../../assets/disciplines/disc1.jpg"
+import two from "../../assets/disciplines/disc2.JPG"
+import three from "../../assets/disciplines/disc3.JPG"
 
 
 const Disciplines = () => {

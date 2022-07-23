@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion"
-import MyModal from "./modal/MyModal";
+import MyModal from "../modal/MyModal";
 
 const About = () => {
   const [isVisibleModal,setIsVisibleModal]=useState(false)
