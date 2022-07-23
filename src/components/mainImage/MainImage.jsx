@@ -4,7 +4,7 @@ import {BsChevronDown} from "react-icons/bs"
 import { motion } from "framer-motion"
 
 const MainImage = () => {
-  return <div className=" w-full relative flex justify-center items-center">
+  return <div className=" w-full -mt-1 relative flex justify-center items-center">
     <motion.div initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="absolute z-10 text-center text-white">
