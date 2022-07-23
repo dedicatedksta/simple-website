@@ -4,6 +4,10 @@ import { motion,AnimatePresence } from "framer-motion";
 
 const Backdrop = ({children,close,visibility}) => {
   
+
+  if (visibility)document.querySelector('body').classList.add('stop-scrolling')
+  else document.querySelector('body').classList.remove('stop-scrolling')
+
   return <AnimatePresence>
     {visibility &&
       (<motion.div
