@@ -7,7 +7,7 @@ import { HashLink } from 'react-router-hash-link'
 const Navbar = () => {
   const [isVisible,setIsVisible]=useState(false)
 
-  return <nav id="home" className={`transition-all ease-in-out duration-300 ${isVisible? "h-screen" :"h-12"} flex flex-col md:flex-row md:py-10 px-8 bg-black text-white font-bold justify-center md:leading-normal leading-9 md:justify-between lg:text-base xl:text-lg md:text-sm items-center `}>
+  return <nav id="home" className={`transition-all ease-in-out duration-300 ${isVisible? "h-screen" :"h-14"} flex flex-col md:flex-row md:py-10 px-8 bg-black text-white font-bold justify-center md:leading-normal leading-9 md:justify-between lg:text-base xl:text-lg md:text-sm items-center `}>
     <ul className={`md:flex ${!isVisible? "hidden" :""}`}>
       <HashLink to="#about" smooth> <li className="px-3 cursor-pointer transition-all ease-in-out duration-300 hover:text-slate-300">О нас</li></HashLink>
       <HashLink to="#disciplines" smooth><li className="px-3 cursor-pointer transition-all ease-in-out duration-300 hover:text-slate-300">Дисциплины</li></HashLink>

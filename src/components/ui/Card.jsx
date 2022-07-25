@@ -12,7 +12,7 @@ const Card = ({card}) => {
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
-    className={` max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto flex md:flex-row ${!card.reverse? "md:flex-row-reverse" :""} flex-col py-20`}>
+    className={` max-w-[340px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto flex md:flex-row ${!card.reverse? "md:flex-row-reverse" :""} flex-col py-20`}>
     <img className="flex-1 md:h-[480px] md:w-[360px] lg:h-[640px] xl:h-[769px] object-cover lg:w-[448px] xl:w-[560px]" src={card.img} alt="" />
     <div className={`flex flex-1 pt-6 md:pt-0 flex-col justify-center items-center ${!card.reverse? "md:pr-14" :"md:pl-14"}  text-center`}>
       <h1 className="text-2xl md:text-2xl font-bold mb-6">{card.title}</h1>

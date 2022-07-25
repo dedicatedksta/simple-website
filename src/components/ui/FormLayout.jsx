@@ -26,7 +26,7 @@ const FormLayout = ({popup}) => {
     }
   }
 
-  return <form onClick={(e)=>e.stopPropagation()} className={`${popup? "z-20 max-w-xs md:max-w-lg bg-white box-content py-6 px-4 md:py-10 md:px-8 flex justify-center flex-col items-center" : "max-w-2xl mx-auto text-center mt-32"}`}>
+  return <form onClick={(e)=>e.stopPropagation()} className={`${popup? "z-20 max-w-xs md:max-w-lg bg-white box-content py-6 px-4 md:py-10 md:px-8 flex justify-center flex-col items-center" : "max-w-[340px] mx-auto text-center mt-32"}`}>
   <h1 className="mb-6 text-2xl md:text-4xl  font-bold">Записаться на пробное занятие</h1>
   <div className="flex flex-col mx-auto mb-6 w-[90%]">
     <span className=" self-start text-lg">Имя</span>

@@ -10,13 +10,13 @@ const Disciplines = () => {
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
   viewport={{ once: true }}
-  className="flex flex-col md:flex-row my-32 mx-auto justify-between max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-5xl ">
+  className="flex flex-col md:flex-row my-32 mx-auto justify-between max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-5xl ">
     <div className="flex flex-col">
       <div className="flex flex-1 items-center justify-center">
-        <img src={one} className="lg:w-64 lg:h-96 md:w-52 w-64 h-80" ></img>
-        <img src={two} className="lg:w-52 lg:h-64 w-48 h-56 ml-6"></img>
+        <img src={one} className="lg:w-64 lg:h-96 md:w-52 w-44 h-70" ></img>
+        <img src={two} className="lg:w-52 lg:h-64 w-36 h-42 ml-6"></img>
       </div>
-      <img src={three} className="lg:w-96 lg:h-52 w-80 -mt-8 h-44 ml-6 self-center"></img>
+      <img src={three} className="lg:w-96 lg:h-52 w-72 -mt-8 h-40 ml-6 self-center"></img>
     </div>
     <div className="flex flex-1 justify-center text-center items-center pt-10 pl-0 md:pt-0  md:pl-4 lg:pl-20 xl:pl-28">
       <div>

@@ -12,8 +12,8 @@ const MainImage = () => {
       <h2 className="text-lg md:text-4xl my-4">В мир несем красоту!</h2>
       <span className="text-sm md:text-xl my-8">Модельная студия создана специально для тебя</span>
     </motion.div>
-    <img className="   w-full brightness-[0.35]" src={mainImage} alt="" />
-    <BsChevronDown className="z-10 animate-bounce absolute bottom-0 text-2xl md:text-4xl" color="white" />
+    <img className="   w-full h-[93vh] object-cover brightness-[0.35]" src={mainImage} alt="" />
+    <BsChevronDown className="z-10 animate-bounce absolute bottom-2 text-2xl md:text-4xl" color="white" />
   </div>;
 };
 
