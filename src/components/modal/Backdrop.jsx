@@ -22,8 +22,10 @@ const Backdrop = ({children,close,visibility}) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      onClick={close} className={`${visibility? "flex":"hidden"} inset-0 max-h-full  justify-center items-center h-screen w-screen backdrop-brightness-[0.25] fixed`}>
-        <RiCloseFill className="cursor-pointer absolute md:top-6 top-3 right-2 md:right-10 text-4xl text-white"/>
+      onClick={close} className={`${visibility? "flex":"hidden"} inset-0 flex-col justify-center items-center h-screen w-screen backdrop-brightness-[0.25] fixed`}>
+        <div className="self-end px-3">
+          <RiCloseFill className="cursor-pointer self-end text-4xl text-white"/>
+        </div>
         {children}
       </motion.div>)
     }
