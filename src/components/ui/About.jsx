@@ -10,6 +10,7 @@ const About = () => {
   return <motion.div id="about"
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
     className="flex flex-col text-center mx-auto max-w-sm md:max-w-2xl my-20 ">
     <h1 className="text-2xl md:text-4xl font-bold mb-8">О студии</h1>
     <div className="text-base md:text-lg text-gray-600">Мы готовы громко заявить о тебе, чтобы о твоих успехах, в качестве модели, узнал весь мир. <br /> <br /> На базе моделинга благодаря молодым, креативным, энергичным специалистам ты будешь расти и развиваться, реализовывать свой потенциал и творить вместе с нами, совершенствоваться и покорять новые вершины.</div>

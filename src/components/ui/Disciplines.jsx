@@ -9,6 +9,7 @@ const Disciplines = () => {
   return <motion.div id="disciplines"
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
   className="flex flex-col md:flex-row my-32 mx-auto justify-between max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-5xl ">
     <div className="flex flex-col">
       <div className="flex flex-1 items-center justify-center">

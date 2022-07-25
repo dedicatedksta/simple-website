@@ -1,6 +1,7 @@
 import React from "react";
 import map from "../../assets/map/map.png"
-import {FaTelegram,FaTwitterSquare} from "react-icons/fa"
+import vk from "../../assets/contacts/vk.svg"
+import telegram from "../../assets/contacts/telegram.svg"
 
 const Map = () => {
   return <div id="contacts" className="mt-40 relative flex flex-col-reverse md:block">
@@ -13,9 +14,9 @@ const Map = () => {
         <span>Привольная ул., 2, стр. 1, Москва</span>
         <span className="mt-8">Занятия по выходным</span>
       </div>
-      <div className="text-3xl flex items-center mt-8 gap-2">
-        <FaTelegram className="cursor-pointer" />
-        <FaTwitterSquare className="cursor-pointer"/>
+      <div className="text-3xl flex items-center gap-2">
+       <a href="https://vk.com/studiosupermodels" target="_blank"> <img className="cursor-pointer" src={vk} alt="vk" /></a>
+       <a href="https://t.me/an_lyu" target="_blank"> <img className="cursor-pointer" src={telegram} alt="telegram" /></a>
       </div>
     </div>
   </div>;
