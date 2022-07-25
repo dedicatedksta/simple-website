@@ -26,8 +26,8 @@ const FormLayout = ({popup}) => {
     }
   }
 
-  return <form onClick={(e)=>e.stopPropagation()} className={`${popup? "z-20 max-w-xs md:max-w-lg bg-white box-content py-6 px-4 md:py-10 md:px-8 flex justify-center flex-col items-center" : "max-w-[340px] mx-auto text-center mt-32"}`}>
-  <h1 className="mb-6 text-2xl md:text-4xl  font-bold">Записаться на пробное занятие</h1>
+  return <form onClick={(e)=>e.stopPropagation()} className={`${popup? "z-20 max-w-[340px] md:max-w-lg bg-white box-content py-6 px-4 md:py-10 md:px-8 flex justify-center flex-col items-center" : "max-w-[340px] md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto text-center mt-32"}`}>
+  <h2 className="mb-6 text-2xl xl:text-5xl md:text-4xl  font-bold">Записаться на пробное занятие</h2>
   <div className="flex flex-col mx-auto mb-6 w-[90%]">
     <span className=" self-start text-lg">Имя</span>
     <input className="w-full rounded-md h-12 md:h-16 px-4 border-2 border-gray-300" type="text" value={name} required={true} onChange={e => setName(e.target.value)} placeholder="Алексей Свирок" />
@@ -42,7 +42,7 @@ const FormLayout = ({popup}) => {
     value={phone}
     onChange={setPhone}/>
   </div>
-  <button onClick={handleClick} className=" mt-6 mx-auto border-2 border-black bg-black text-white w-[90%]  rounded-3xl md:py-4 md:px-11 py-2 px-6 hover:bg-white hover:text-black">Записаться</button>
+  <button onClick={handleClick} className=" mt-6 mx-auto border-2 border-black bg-black text-white w-[90%]  rounded-3xl md:py-4 md:px-11 py-3 px-6 transition-all ease-in-out duration-300 hover:bg-white hover:text-black">Записаться</button>
   <AnimatePresence>
     {msg.type&&
     <motion.div
