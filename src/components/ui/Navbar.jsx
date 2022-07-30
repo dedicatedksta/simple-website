@@ -3,9 +3,21 @@ import {HiViewList} from "react-icons/hi"
 import {RiCloseFill} from "react-icons/ri"
 import {BsChevronUp} from "react-icons/bs"
 import { HashLink } from 'react-router-hash-link'
+import { motion, AnimatePresence } from "framer-motion"
+
 
 const Navbar = () => {
   const [isVisible,setIsVisible]=useState(false)
+  const [isTopBtnVisible,setIsTopBtnVisible]=useState(false)
+  
+  window.addEventListener('scroll',checkHeight)
+  function checkHeight(){
+    if (window.scrollY>(window.innerHeight/3)){
+      setIsTopBtnVisible(true)
+      return
+    }
+    setIsTopBtnVisible(false)
+  }
 
   return <nav id="home" className={`transition-all ease-in-out duration-300 ${isVisible? "h-screen" :"h-14"} flex flex-col md:flex-row md:py-10 px-8 bg-black text-white font-bold justify-center md:leading-normal leading-9 md:justify-between lg:text-base xl:text-lg md:text-sm items-center `}>
     <ul className={`md:flex ${!isVisible? "hidden" :""}`}>
@@ -23,9 +35,18 @@ const Navbar = () => {
       />
       :<RiCloseFill onClick={()=>setIsVisible(!isVisible)} className={`cursor-pointer md:hidden absolute top-3 text-2xl right-6`}/>
     }
-    <HashLink to="#home" smooth><button className=" z-40 fixed bottom-3 right-3 md:bottom-6 md:right-6 bg-white hover:bg-blue-400 hover:text-white transition-all ease-in-out duration-300 p-2 text-xl md:p-3 text-black  rounded-full md:text-2xl" style={{boxShadow: '6px 6px 12px 2px rgba(0, 0, 0, 0.2)'}} >
+
+    <AnimatePresence>
+    { isTopBtnVisible &&
+    <HashLink to="#home" smooth><motion.button
+    initial={{scale:0}}
+    animate={{scale:1}}
+    exit={{scale:0}}
+    className=" z-40 fixed bottom-3 right-3 md:bottom-6 md:right-6 bg-white hover:bg-blue-400 hover:text-white transition-all ease-in-out duration-300 p-2 text-xl md:p-3 text-black  rounded-full md:text-2xl" style={{boxShadow: '6px 6px 12px 2px rgba(0, 0, 0, 0.2)'}} >
       <BsChevronUp />
-    </button></HashLink>
+    </motion.button></HashLink>
+    }
+    </AnimatePresence>
   </nav>;
 };
 
